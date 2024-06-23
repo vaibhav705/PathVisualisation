@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/datastruct.js"></script>
+    <script src="js/pathfind.js"></script>
+    <script src="js/pathfinders/bfs.js"></script>
+    <script src="js/pathfinders/dijkstra.js"></script>
+    <script src="js/pathfinders/astar.js"></script>
+    <script src="js/pathfinders/jps.js"></script>
+</head>
+
+<body>
+    <div class="grid-container" ondragstart="return false;" ondrop="return false;"></div>
+    <button onclick="if (grid.mode == 'pathfind') return; grid.setMode('edit'); grid.clearColors()">Edit</button>
+    <button onclick="if (grid.mode == 'pathfind') return; bfs.run()">Breadth First Search</button>
+    <button onclick="if (grid.mode == 'pathfind') return; dijkstra.run()">Dijkstra's Algorithm</button>
+    <button onclick="if (grid.mode == 'pathfind') return; astar.run()">A* Search</button>
+    <button onclick="if (grid.mode == 'pathfind') return; jps.run()">Jump Point Search</button>
+    <script src="js/grid.js"></script>
+</body>
+
+</html>

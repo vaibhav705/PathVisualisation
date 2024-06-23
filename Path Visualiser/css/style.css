@@ -1,0 +1,58 @@
+:root {
+    --grid-width: 1;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-width), 50px);
+    grid-gap: 0px;
+}
+
+.grid-item {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    text-align: center;
+    border-width: 1px;
+}
+
+.grid-item:hover[status="blank"][mode="edit"] {
+    background-color: rgb(255, 255, 147);
+}
+
+.grid-item[status="wall"] {
+    background-color: gray;
+}
+
+.grid-item:hover[status="wall"][mode="edit"] {
+    background-color: rgb(145, 145, 87);
+}
+
+.grid-item[color="visited"] {
+    background-color: rgb(255, 194, 190);
+}
+
+.grid-item[color="explored"] {
+    background-color: rgb(255, 219, 153);
+}
+
+.grid-item[color="path"] {
+    background-color: rgb(201, 153, 255);
+}
+
+.grid-item[status="start"] {
+    background-color: rgb(158, 255, 102);
+}
+
+.grid-item[status="goal"] {
+    background-color: rgb(243, 119, 98);
+}
+
+
